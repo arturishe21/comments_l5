@@ -1,0 +1,21 @@
+{
+  "name": "vis/comments_l5",
+  "description": "Comments for L5",
+  "authors": [
+    {
+      "name": "vis",
+      "email": "artur@vis-design.com"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "src/Models",
+      "src/Http/Controllers",
+      "src/Migrations",
+      "src/Facades"
+    ],
+    "psr-4": {
+      "Vis\\Comments\\": "src/"
+    }
+  }
+}

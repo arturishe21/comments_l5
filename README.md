@@ -26,7 +26,7 @@ composer update
 
 И если нужно публикуем views
 ```json
-   pphp artisan vendor:publish --tag=comments_views --force
+   php artisan vendor:publish --tag=comments_views --force
 ```
 -----------------------------------
 Использование на фронтенде:

@@ -9,7 +9,7 @@
                         <div class="reviews__comment">
                             <p>{{$comment->message}}</p>
                         </div>
-                    </div
+                    </div>
                 @endforeach
             </table>
         </div>

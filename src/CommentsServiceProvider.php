@@ -35,6 +35,11 @@ class CommentsServiceProvider extends ServiceProvider
         ], 'comments_views');
 
         $this->publishes([
+            __DIR__ . '/config_definition/comments.php' => config_path('builder/tb-definitions/comments.php')
+        ], 'config_definition');
+
+
+        $this->publishes([
             realpath(__DIR__.'/Migrations') => $this->app->databasePath().'/migrations',
         ]);
 

@@ -24,6 +24,11 @@ composer update
    php artisan vendor:publish --tag=comments --force
 ```
 
+Копируем definition для комментариев
+```json
+   php artisan vendor:publish --tag=config_definition --force
+```
+
 И если нужно публикуем views
 ```json
    php artisan vendor:publish --tag=comments_views --force

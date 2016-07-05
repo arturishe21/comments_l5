@@ -3,8 +3,9 @@
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Facades\View;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use BaseModel;
 
-class Comment extends Eloquent {
+class Comment extends BaseModel {
 
     protected $table = 'comments';
 

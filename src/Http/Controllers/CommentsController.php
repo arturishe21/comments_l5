@@ -7,11 +7,14 @@ use Illuminate\Support\Facades\Crypt;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\View;
 use Vis\Comments\Facades\Comments;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Cache;
 
 class CommentsController extends Controller
 {
     public function doAddComment()
     {
+
         parse_str(Input::get('data'), $data);
 
         if (isset($data['id_page'])) {
@@ -21,6 +24,10 @@ class CommentsController extends Controller
 
             if (Sentinel::check()) {
                 $data['user_id'] = Sentinel::getUser()->id;
+            }
+
+            if (Config::get("comments.config.cache_tag")) {
+                Cache::tags(Config::get("comments.config.cache_tag"))->flush();
             }
 
             Comment::create($data);

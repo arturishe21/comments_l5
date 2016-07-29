@@ -72,4 +72,16 @@ class Comment extends BaseModel {
 
         return $allComments;
     }
+
+    public function getPageInfo()
+    {
+        if ($this->commentpage_type && $this->commentpage_id) {
+            $model = $this->commentpage_type;
+            $object = $model::find($this->commentpage_id);
+
+            if (isset($object->id)) {
+                return $object;
+            }
+        }
+    }
 }

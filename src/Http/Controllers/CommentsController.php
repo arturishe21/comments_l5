@@ -42,6 +42,4 @@ class CommentsController extends Controller
 
         return View::make('comments::list_comments', compact("comments"));
     }
-
-
 }

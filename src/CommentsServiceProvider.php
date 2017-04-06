@@ -1,9 +1,7 @@
 <?php namespace Vis\Comments;
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Symfony\Component\Finder\Finder;
 
 class CommentsServiceProvider extends ServiceProvider
 {
@@ -42,7 +40,6 @@ class CommentsServiceProvider extends ServiceProvider
         $this->publishes([
             realpath(__DIR__.'/Migrations') => $this->app->databasePath().'/migrations',
         ]);
-
     }
 
     /**
@@ -76,11 +73,4 @@ class CommentsServiceProvider extends ServiceProvider
             $loader->alias('Comments', 'Vis\Comments\Facades\Comments');
         });
     }
-
-    public function provides()
-    {
-    }
 }
-
-
-

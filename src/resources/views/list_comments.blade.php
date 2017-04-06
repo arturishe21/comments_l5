@@ -16,5 +16,4 @@
     @else
         <div style="text-align: center; padding: 50px 0">Пока нет комментариев</div>
     @endif
-
 </div>

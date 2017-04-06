@@ -1,7 +1,6 @@
 <?php namespace Vis\Builder\Helpers;
 
 use Vis\Builder\Handlers\CustomHandler;
-use Illuminate\Support\Facades\View;
 
 class CommentsHandler extends CustomHandler
 {
@@ -52,5 +51,4 @@ class CommentsHandler extends CustomHandler
 
         }
     }
-
 }
